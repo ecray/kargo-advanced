@@ -17,14 +17,14 @@ global:
       labels: {}
 
 # TimeZone is used to set the environment variable TZ for pod, with Asia/Shanghai as the default.
-timeZone: Asia/Shanghai
+timeZone: Etc/UTC
 
 # Set the nameOverride values for creating the same resources with the parent chart.
 # In version v1.7.1 or before, there is only one chart called kube-starrocks, and the chart name is the prefix
 # of some resources created by the chart.
 # In version v1.8.0, the kube-starrocks chart is split into two charts, and to keep backward compatibility, the
 # nameOverride is used to set the prefix of the resources created by the operator chart.
-nameOverride: "kube-starrocks"
+nameOverride: "starrocks"
 
 starrocksOperator:
   # If enabled, the operator-related resources will be created, including the operator deployment, service account,
